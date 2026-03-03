@@ -1,10 +1,14 @@
 # Base Image
 FROM python:3.10-slim
 
+# Copy uv binary from the official image
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=1 \
+    UV_COMPILE_BYTECODE=1 \
+    UV_SYSTEM_PYTHON=1 \
     HF_HOME=/home/user/.cache \
     HOME=/home/user
 
@@ -17,13 +21,17 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Create a non-root user and ensure home directory exists
+# Copy project files
+COPY . .
+
+# Install Python dependencies using uv (as root, into system site-packages)
+RUN uv pip install --no-cache .
+
+# Create a non-root user and fix permissions
 RUN useradd -m -u 1000 user && \
     mkdir -p /home/user/.cache && \
-    chown -R user:user /home/user
-
-# Copy project files and set ownership
-COPY --chown=user:user . .
+    chown -R user:user /home/user && \
+    chown -R user:user /app
 
 # Ensure scripts are executable
 RUN chmod +x scripts/*.sh
@@ -31,9 +39,6 @@ RUN chmod +x scripts/*.sh
 # Switch to non-root user
 USER user
 ENV PATH=/home/user/.local/bin:$PATH
-
-# Install Python dependencies
-RUN pip install -e ".[dev]"
 
 # Expose ports (HF defaults to 7860)
 EXPOSE 7860
