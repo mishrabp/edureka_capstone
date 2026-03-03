@@ -57,7 +57,7 @@ graph TD;
 ### 3.2 Installation Steps
 1.  **Clone the Repository**:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/mishrabp/edureka_capstone
     cd capstone
     ```
 
@@ -109,3 +109,8 @@ The app requires both the Backend (FastAPI) and Frontend (Streamlit) to be runni
 
 ## 5. Compliance with Capstone Tasks
 This system fully implements the 10 mandated tasks, including **Intelligent Document Retrieval (Task 6)**, **Agent-based Reasoning (Task 8)**, and **Reliability/Safety Controls (Task 9)** via the LangGraph Validator node and RAG state gating.
+
+
+## 6. HuggingFace Space
+
+The application is also deployed on HuggingFace Space. You can access it at: https://huggingface.co/spaces/mishrabp/edureka
