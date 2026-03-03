@@ -9,8 +9,6 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     UV_COMPILE_BYTECODE=1 \
     UV_SYSTEM_PYTHON=1 \
-    HF_HOME=/home/user/.cache \
-    SENTENCE_TRANSFORMERS_HOME=/home/user/.cache \
     HOME=/home/user
 
 # Copy project files
@@ -18,10 +16,6 @@ COPY . .
 
 # Install Python dependencies using uv (as root, into system site-packages)
 RUN uv pip install --no-cache .
-
-# Pre-download the Hugging Face embedding model during build
-# This saves the model permanently to /app/model_cache
-RUN python scripts/pre_download_models.py
 
 # Create a non-root user and fix permissions
 RUN useradd -m -u 1000 user && \

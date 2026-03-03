@@ -39,9 +39,7 @@ dependencies = [
     "langchain-google-genai>=1.0.0",  # Google Gemini (default)
     "langchain-openai>=0.1.0",        # OpenAI (optional)
 
-    # ── Embeddings (local, no API key) ───────────────────────────────────────
-    "sentence-transformers>=3.0.0",
-    "langchain-huggingface>=0.0.3",
+    # ── Embeddings (Google Gemini — via langchain-google-genai) ────────────────
 
     # ── Vector store (in-memory) ─────────────────────────────────────────────
     "chromadb>=0.5.0",

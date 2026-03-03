@@ -7,12 +7,11 @@ ChromaDB is configured with no persistence (ephemeral / in-memory only).
 from __future__ import annotations
 
 import logging
-import os
 from typing import List, Optional
 
 import chromadb
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_core.documents import Document
 
 from app.config import get_settings
@@ -27,20 +26,11 @@ class VectorStoreManager:
 
     def __init__(self) -> None:
         settings = get_settings()
-        
-        # Priority: Check for the pre-downloaded model from the Docker build
-        model_path = "/app/model_cache"
-        if os.path.exists(model_path):
-            logger.info("Using pre-downloaded local model from: %s", model_path)
-            model_target = model_path
-        else:
-            logger.info("Local model not found, falling back to name: %s", settings.embedding_model)
-            model_target = settings.embedding_model
 
-        self._embeddings = HuggingFaceEmbeddings(
-            model_name=model_target,
-            model_kwargs={"device": "cpu"},
-            encode_kwargs={"normalize_embeddings": True},
+        logger.info("Initialising Gemini embeddings: %s", settings.embedding_model)
+        self._embeddings = GoogleGenerativeAIEmbeddings(
+            model=settings.embedding_model,
+            google_api_key=settings.google_api_key,
         )
 
         # Ephemeral (in-memory) Chroma client

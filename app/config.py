@@ -12,8 +12,8 @@ class Settings(BaseSettings):
     google_api_key: str = ""
     openai_api_key: str = ""
 
-    # Embeddings (HuggingFace — runs locally)
-    embedding_model: str = "all-MiniLM-L6-v2"
+    # Embeddings (Google Gemini — uses GOOGLE_API_KEY)
+    embedding_model: str = "gemini-embedding-001"
 
     # RAG chunking
     chunk_size: int = 800
@@ -24,9 +24,6 @@ class Settings(BaseSettings):
     app_host: str = "0.0.0.0"
     app_port: int = 8001
     frontend_origin: str = "http://localhost:8501"
-
-    # Cache
-    hf_home: str = "/home/user/.cache"
 
 
 @lru_cache
