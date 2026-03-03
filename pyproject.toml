@@ -36,8 +36,7 @@ dependencies = [
     "langgraph>=0.1.0",
 
     # ── LLM providers ────────────────────────────────────────────────────────
-    "langchain-google-genai>=1.0.0",  # Google Gemini (default)
-    "langchain-openai>=0.1.0",        # OpenAI (optional)
+    "langchain-google-genai>=1.0.0",  # Google Gemini (LLM + embeddings)
 
     # ── Embeddings (Google Gemini — via langchain-google-genai) ────────────────
 
@@ -49,9 +48,7 @@ dependencies = [
     "pypdf>=4.2.0",
     "openpyxl>=3.1.0",
 
-    # ── Data handling ────────────────────────────────────────────────────────
-    "pandas>=2.2.0",
-    "numpy>=1.26.0",
+
 
     # ── Frontend ─────────────────────────────────────────────────────────────
     "streamlit>=1.35.0",
