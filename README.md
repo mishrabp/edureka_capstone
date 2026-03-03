@@ -91,6 +91,13 @@ Open browser at: http://localhost:8501
 
 ## Agent Pipeline
 
+```mermaid
+graph LR
+    A[Planner<br/>Refine Query] --> B[Retriever<br/>Fetch Evidence]
+    B --> C[Reasoner<br/>Synthesize Answer]
+    C --> D[Validator<br/>Safety Check]
+```
+
 | Step | Node | Role |
 |------|------|------|
 | 1 | **Planner** | Reformulates the question for better retrieval; detects greetings |

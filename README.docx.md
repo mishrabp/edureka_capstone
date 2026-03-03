@@ -8,11 +8,32 @@ This capstone project implements an **Agentic Retrieval-Augmented Generation (RA
 ### 2.1 Agentic Orchestration: LangGraph
 Unlike traditional linear RAG, this system uses **LangGraph** to manage a stateful, multi-node workflow. This ensures each query is planned, retrieved, and validated before reaching the user.
 
-#### Workflow Visualization:
-![LangGraph Agentic RAG Workflow](docs/images/langgraph_workflow.png)
+#### Workflow Visualization: 
+```mermaid
+graph LR
+    A[Planner<br/>Refine Query] --> B[Retriever<br/>Fetch Evidence]
+    B --> C[Reasoner<br/>Synthesize Answer]
+    C --> D[Validator<br/>Safety Check]
+```
 
 #### Compiled Graph Build (Source-Generated):
-![LangGraph Logic View](docs/images/langgraph_generated.png)
+```mermaid
+graph TD;
+        __start__([__start__]):::first
+        planner(planner)
+        retriever(retriever)
+        reasoner(reasoner)
+        validator(validator)
+        __end__([__end__]):::last
+        __start__ --> planner;
+        planner --> retriever;
+        reasoner --> validator;
+        retriever --> reasoner;
+        validator --> __end__;
+        classDef default fill:#f2f0ff,line-height:1.2
+        classDef first fill-opacity:0
+        classDef last fill:#bfb6fc
+```
 
 #### Agent Node Logic:
 - **Planner Node**: Utilizes the LLM to decompose and refine the user's natural language into a technical search query. It acts as a "Query Expansion" layer to improve retrieval recall.
