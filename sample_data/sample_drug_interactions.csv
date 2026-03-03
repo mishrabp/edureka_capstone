@@ -1,0 +1,18 @@
+Drug A,Drug B,Severity,Interaction Effect,Clinical Action
+Warfarin,Aspirin,Major,Increased bleeding risk -- additive anticoagulant effect,Avoid; if needed use lowest aspirin dose and monitor INR closely
+Metformin,IV Contrast Dye,Major,Contrast nephropathy + lactic acidosis risk,Hold Metformin 48h before/after IV contrast; recheck renal function before restart
+Lisinopril,Potassium supplements,Moderate,Hyperkalaemia -- ACE inhibitor reduces K+ excretion,Monitor K+ every 1-2 weeks; target 3.5-5.0 mEq/L
+Simvastatin,Clarithromycin,Major,CYP3A4 inhibition raises Simvastatin levels -- myopathy/rhabdomyolysis,Switch to Azithromycin or hold Simvastatin during antibiotic course
+Amlodipine,Simvastatin,Moderate,Amlodipine inhibits CYP3A4 -- Simvastatin levels may rise,Limit Simvastatin to 20mg/day with Amlodipine
+Ciprofloxacin,Antacids (Al/Mg),Moderate,Chelation reduces Ciprofloxacin absorption by up to 90%,Take Ciprofloxacin 2h before or 6h after antacids
+Clopidogrel,Omeprazole,Moderate,Omeprazole inhibits CYP2C19 -- reduces Clopidogrel antiplatelet effect,Switch PPI to Pantoprazole
+Methotrexate,NSAIDs,Major,NSAIDs reduce renal clearance of MTX -- toxicity risk,Avoid NSAIDs; use Paracetamol instead
+Lithium,Thiazide diuretics,Major,Diuretics reduce renal Li+ excretion -- toxicity risk,Monitor Lithium levels weekly; consider alternative diuretic
+Sildenafil,Nitrates,Contraindicated,Severe hypotension -- additive vasodilation,Absolute contraindication -- do not co-prescribe
+Digoxin,Amiodarone,Major,P-gp inhibition raises Digoxin levels by 50-100%,Reduce Digoxin dose by 50%; monitor ECG and levels
+Tramadol,SSRIs (e.g. Sertraline),Major,Serotonin syndrome -- additive serotonergic effects,Avoid; use alternative analgesics
+Fluconazole,Warfarin,Major,CYP2C9 inhibition -- Warfarin effect dramatically increased,Reduce Warfarin 30-50%; check INR every 2-3 days during fluconazole
+Atorvastatin,Rifampicin,Major,CYP3A4 induction -- Atorvastatin levels reduced by 80%,Increase dose or switch to Rosuvastatin
+Metoprolol,Verapamil,Major,Additive negative chronotropic effect -- bradycardia and heart block,Avoid; if essential monitor ECG continuously
+Enoxaparin,Ketorolac,Major,Additive anticoagulation -- high bleeding risk,Avoid concurrent use; use Paracetamol for pain
+Tacrolimus,Grapefruit juice,Moderate,CYP3A4 inhibition raises Tacrolimus unpredictably,Avoid grapefruit entirely in transplant patients

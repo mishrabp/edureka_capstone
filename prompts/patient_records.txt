@@ -1,0 +1,13 @@
+# Patient Record Queries
+# Category: Patient Records
+# Icon: 🏥
+# Description: Look up specific patient information, medications, and history
+
+Which patients currently have critical lab results?
+What medications is patient P-1005 David Park currently prescribed?
+Which patients have an allergy to Penicillin or Cephalosporins?
+What is the current eGFR of patient Mary Patel (P-1002) and what does it mean for her Metformin dose?
+List all patients in the Cardiology ward and their primary diagnoses.
+Which patients are on anticoagulation therapy and what are they taking?
+What is the attending physician for patient Helen Costa and what ward is she in?
+Which patients have both diabetes and a cardiac condition?

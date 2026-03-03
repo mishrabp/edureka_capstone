@@ -1,0 +1,89 @@
+================================================================================
+CITY GENERAL HOSPITAL -- CLINICAL NOTES REPOSITORY
+Department of Internal Medicine & Critical Care | March 2025
+================================================================================
+
+PATIENT: James Mitchell | ID: P-1001 | Ward: Cardiology
+ATTENDING: Dr. Sarah Chen | Date: 28-Feb-2025
+
+PRESENTING COMPLAINT:
+Routine follow-up of Stage 2 hypertension and Type 2 Diabetes Mellitus.
+Intermittent morning headaches (4/10). Good medication compliance.
+
+VITAL SIGNS:
+  BP: 158/96 mmHg (target <130/80)  HR: 78 bpm  SpO2: 97%  Weight: 94 kg  BMI: 31.2
+
+ASSESSMENT & PLAN:
+  1. Hypertension -- suboptimal. Increase Amlodipine 5mg to 10mg OD.
+     Add Indapamide 1.5mg MR if BP >140/90 at follow-up in 4 weeks.
+  2. Type 2 DM -- HbA1c 8.2% (target <7%). Increase Metformin to 1000mg BD.
+     Dietitian referral. Consider adding Empagliflozin 10mg OD at next visit.
+  3. CKD Stage 2 (eGFR 58) -- monitor. AVOID NSAIDs. Annual urine ACR.
+  4. Atorvastatin 40mg OD continued. LDL target <1.8 mmol/L.
+  REVIEW: 4 weeks. Repeat FBC, U&E, HbA1c, fasting lipids.
+
+--------------------------------------------------------------------------------
+PATIENT: David Park | ID: P-1005 | Ward: ICU Bed 4
+ATTENDING: Dr. Sarah Chen | Date: 01-Mar-2025 | Time: 06:30
+
+PRESENTING COMPLAINT:
+49M admitted with 3-day productive cough, fever (39.4C), rigors. Haemodynamic
+deterioration at 02:00 -- BP 72/40 mmHg. Septic Shock from CAP.
+Allergy: Cephalosporins (rash).
+
+HOUR-1 SEPSIS BUNDLE (completed 03:15):
+  [x] Blood cultures x2 at 02:45 -- results pending
+  [x] Lactate: 4.8 mmol/L (CRITICAL -- repeat at 06:00)
+  [x] IV Meropenem 1g q8h started 03:00 (Day 1)
+  [x] IV Norepinephrine 0.1 mcg/kg/min -- MAP now 66 mmHg
+  [x] 30 mL/kg crystalloid (2L 0.9% NaCl) completed
+  [x] CXR: Right lower lobe consolidation
+  [x] ABG: pH 7.28 -- metabolic acidosis
+
+CURRENT STATUS (06:30):
+  MAP: 67 mmHg | SpO2: 91% on HFNC 60L/min FiO2 0.5
+  Urine output: 35 mL/h | Lactate 06:00: 3.2 mmol/L (improving)
+  PLAN: Continue Meropenem. Low threshold for intubation if SpO2 <88%.
+  De-escalate antibiotics when micro sensitivities available.
+
+--------------------------------------------------------------------------------
+PATIENT: Helen Costa | ID: P-1006 | Ward: Cardiology
+ATTENDING: Dr. Raj Kumar | Date: 18-Jan-2025
+
+PRESENTING COMPLAINT:
+64F with ischaemic cardiomyopathy (EF 35%). 5-day progressive dyspnoea (NYHA III),
+bilateral leg swelling, orthopnoea. Weight up 5 kg in 10 days.
+
+VITAL SIGNS:
+  BP: 102/68 mmHg  HR: 102 bpm (irregular -- AF)  SpO2: 89% on room air
+  JVP elevated 6 cm. Bibasal crackles. Pitting oedema 2+ to knees.
+
+ECHO: EF 33% (down from 38% in October). Moderate MR. LV hypokinesis -- diffuse.
+
+DIAGNOSIS: Acute decompensated HFrEF
+
+PLAN:
+  1. IV Furosemide 80mg BD -- target diuresis 1.5-2L/day. Strict fluid restriction 1.5L.
+  2. Carvedilol 6.25mg BD -- hold if SBP < 90 mmHg.
+  3. AF with RVR -- IV Digoxin loading 0.5mg, then 0.25mg in 6h. Continue Apixaban.
+  4. Hyponatraemia (Na 128) -- restrict free water. Avoid hypotonic IV fluids.
+  REVIEW: Twice daily.
+
+--------------------------------------------------------------------------------
+PATIENT: Margaret Johnson | ID: P-1010 | Ward: Geriatrics
+ATTENDING: Dr. Lisa Tran | Date: 10-Feb-2025
+
+Serum Digoxin 2.8 nmol/L (therapeutic: 1.0-2.6). Possible double dose at nursing home.
+Symptoms: nausea, vomiting, yellow-green visual halos.
+ECG: Sinus bradycardia HR 48, PR prolongation 240ms. No heart block.
+K+: 3.1 (low) -- IV potassium 40 mmol in 500mL NaCl over 4h.
+
+MANAGEMENT:
+  1. HOLD Digoxin until level <2.0 nmol/L (repeat in 24h)
+  2. Continuous cardiac monitoring -- alert for AV block or VT
+  3. DigiFab NOT indicated at this level (threshold: life-threatening arrhythmia or K+>5.5)
+  4. Notify nursing home pharmacist -- review MAR for double-dosing incident
+
+================================================================================
+END OF NOTES -- CONFIDENTIAL -- FOR AUTHORISED HEALTHCARE PERSONNEL ONLY
+================================================================================

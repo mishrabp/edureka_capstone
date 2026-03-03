@@ -1,0 +1,13 @@
+# Lab Result Interpretation
+# Category: Diagnostics
+# Icon: 🔬
+# Description: Interpret abnormal lab values and understand clinical implications
+
+What does a critically low eGFR of 22 mean for a patient's medication management?
+A patient has a potassium of 5.6 mEq/L — what medications should be reviewed?
+How should I interpret a BNP of 1820 pg/mL in a cardiac patient?
+What is the clinical significance of a lactate of 4.8 mmol/L?
+A patient's Digoxin level is 2.8 nmol/L — what are the signs of toxicity and how should I manage it?
+Which of the patients has a critically low neutrophil count and what are the risks?
+What HbA1c level is considered diagnostic for Type 2 Diabetes?
+A patient has an INR of 2.4 on Warfarin for atrial fibrillation — is this within the therapeutic range?

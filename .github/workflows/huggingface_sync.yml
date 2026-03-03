@@ -1,0 +1,27 @@
+name: Sync to Hugging Face hub
+on:
+  push:
+    branches: [main]
+
+  # to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Install Hugging Face Hub
+        run: pip install huggingface-hub
+      - name: Ensure Space Exists
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python -c "from huggingface_hub import create_repo; create_repo(repo_id='mishrabp/edureka', repo_type='space', space_sdk='docker', private=False, exist_ok=True)"
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://mishrabp:$HF_TOKEN@huggingface.co/spaces/mishrabp/edureka main

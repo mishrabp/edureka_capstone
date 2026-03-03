@@ -1,0 +1,13 @@
+# Clinical Guidelines
+# Category: Treatment Protocols
+# Icon: 📋
+# Description: Query evidence-based treatment guidelines and protocols
+
+What is the first-line treatment for Stage 2 hypertension?
+How do I manage a patient with Type 2 Diabetes who has an HbA1c of 10%?
+What is the recommended antibiotic regimen for severe community-acquired pneumonia in the ICU?
+When should I switch from monotherapy to dual therapy for hypertension?
+Which SGLT2 inhibitor is preferred for a diabetic patient with heart failure?
+What are the blood pressure targets for a hypertensive patient with CKD?
+How long should I treat community-acquired pneumonia with antibiotics?
+What are the diagnostic criteria for Type 2 Diabetes Mellitus?

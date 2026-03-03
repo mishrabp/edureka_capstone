@@ -1,0 +1,13 @@
+# Renal Failure & Drug Dosing
+# Category: Prescribing Safety
+# Icon: 🩺
+# Description: Safe prescribing in renal impairment and dose adjustment guidance
+
+Which medications must be completely avoided in patients with eGFR less than 30?
+How should I adjust the Enoxaparin dose in a patient with severe renal failure?
+Can I use Dabigatran for anticoagulation in a patient with CKD Stage 4?
+What is the maximum dose of Gabapentin safe to use in renal failure?
+Why is Metformin contraindicated in severe renal impairment and what is the alternative?
+A patient needs pain relief but has eGFR of 20 — what analgesics are safe?
+How often should I check Lithium levels in a patient with impaired renal function?
+What is the dose reduction required for Ciprofloxacin in renal failure?

@@ -1,0 +1,13 @@
+# Drug Interactions
+# Category: Drug Safety
+# Icon: 💊
+# Description: Ask about dangerous drug combinations and contraindications
+
+What are the major drug interactions I should be aware of for a patient taking Warfarin?
+Which drugs are absolutely contraindicated with nitrates like nitroglycerin?
+What should I do if a patient on Methotrexate needs pain relief?
+Is it safe to prescribe Simvastatin alongside Clarithromycin for an infection?
+What are the risks of giving Digoxin and Amiodarone together?
+A patient on Clopidogrel needs a PPI — which one is safest?
+Can I give an SSRI to a patient who is already on Tramadol for pain?
+What is the interaction between Fluconazole and Warfarin and how should I manage it?

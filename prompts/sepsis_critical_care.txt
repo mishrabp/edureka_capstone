@@ -1,0 +1,13 @@
+# Sepsis and Critical Care
+# Category: Emergency Protocols
+# Icon: 🚨
+# Description: Critical care protocols, sepsis bundles, and ICU management
+
+What are the steps in the Hour-1 Sepsis Bundle?
+What is the definition of septic shock under Sepsis-3 criteria?
+When should I start vasopressors in a septic patient and which one is first-line?
+What is the role of Hydrocortisone in septic shock management?
+When should I consider intubating a sepsis patient on high-flow nasal cannula?
+How do I interpret a lactate of 4.8 mmol/L in a septic patient?
+What broad-spectrum antibiotics should I use for a patient with a Cephalosporin allergy and severe sepsis?
+What blood cultures should be taken before starting antibiotics in sepsis?
