@@ -24,4 +24,21 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://mishrabp:$HF_TOKEN@huggingface.co/spaces/mishrabp/edureka main
+        run: |
+          # Create a temporary directory for the clean push
+          mkdir /tmp/hf_sync
+          # Sync current files (excluding .git) to the temp dir
+          rsync -av --exclude '.git' ./ /tmp/hf_sync/
+          cd /tmp/hf_sync
+          
+          # Initialize a fresh, temporary git repo
+          git init -b main
+          git config user.name "Hugging Face Sync"
+          git config user.email "sync@huggingface.co"
+          
+          # Add all files and commit
+          git add .
+          git commit -m "Deploy: Clinical RAG Assistant (Clean Push)"
+          
+          # Force push the single clean commit to HF
+          git push --force https://mishrabp:$HF_TOKEN@huggingface.co/spaces/mishrabp/edureka main
