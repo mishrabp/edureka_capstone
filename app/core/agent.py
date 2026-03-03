@@ -15,7 +15,6 @@ import logging
 from typing import TypedDict, Annotated, List, Dict, Any
 
 from langgraph.graph import StateGraph, END
-from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_core.prompts import ChatPromptTemplate
@@ -50,6 +49,13 @@ def _get_llm(temperature: float = 0):
             google_api_key=settings.google_api_key,
             temperature=temperature,
         )
+    # Lazy import — only needed when llm_provider=openai
+    try:
+        from langchain_openai import ChatOpenAI  # noqa: PLC0415
+    except ImportError as exc:
+        raise ImportError(
+            "langchain-openai is not installed. Add it to pyproject.toml or set LLM_PROVIDER=google."
+        ) from exc
     return ChatOpenAI(
         model=settings.llm_model,
         openai_api_key=settings.openai_api_key,

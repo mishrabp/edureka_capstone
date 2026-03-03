@@ -6,12 +6,20 @@ echo "Starting Backend (FastAPI) on port 8001..."
 uvicorn app.main:app --host 0.0.0.0 --port 8001 &
 
 # 2. Dynamic Health Check: Wait for backend to be ready
-echo "Waiting for backend to warm up (loading embedding models)..."
+# Uses Python's urllib (built-in) instead of curl — curl not available in python:slim
+echo "Waiting for backend to warm up..."
 MAX_RETRIES=60
 RETRY_COUNT=0
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-  if curl -s http://localhost:8001/api/v1/health > /dev/null; then
+  if python3 -c "
+import urllib.request, sys
+try:
+    urllib.request.urlopen('http://localhost:8001/api/v1/health', timeout=2)
+    sys.exit(0)
+except Exception:
+    sys.exit(1)
+" 2>/dev/null; then
     echo "Backend is healthy! ✓"
     break
   fi
@@ -26,4 +34,4 @@ fi
 
 # 3. Start Streamlit frontend
 echo "Starting Frontend (Streamlit) on port 7860..."
-streamlit run frontend/app.py --server.port 7860 --server.address 0.0.0.0
+streamlit run frontend/app.py --server.port 7860 --server.address 0.0.0.0 --server.headless true
