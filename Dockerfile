@@ -27,10 +27,16 @@ COPY . .
 # Install Python dependencies using uv (as root, into system site-packages)
 RUN uv pip install --no-cache .
 
-# Create a non-root user and fix permissions
-RUN useradd -m -u 1000 user && \
-    mkdir -p /home/user/.cache && \
-    chown -R user:user /home/user && \
+# Create a non-root user
+RUN useradd -m -u 1000 user
+
+# Pre-download the Hugging Face embedding model during build
+# This stores the model in /home/user/.cache (HF_HOME)
+RUN mkdir -p /home/user/.cache && \
+    python scripts/pre_download_models.py
+
+# Fix permissions for the user's home and the app directory
+RUN chown -R user:user /home/user && \
     chown -R user:user /app
 
 # Ensure scripts are executable
