@@ -26,11 +26,18 @@ class VectorStoreManager:
 
     def __init__(self) -> None:
         settings = get_settings()
+        
+        # Priority: Check for the pre-downloaded model from the Docker build
+        model_path = "/app/model_cache"
+        if os.path.exists(model_path):
+            logger.info("Using pre-downloaded local model from: %s", model_path)
+            model_target = model_path
+        else:
+            logger.info("Local model not found, falling back to name: %s", settings.embedding_model)
+            model_target = settings.embedding_model
 
-        logger.info("Loading embedding model: %s", settings.embedding_model)
         self._embeddings = HuggingFaceEmbeddings(
-            model_name=settings.embedding_model,
-            cache_folder=get_settings().hf_home or "/home/user/.cache",
+            model_name=model_target,
             model_kwargs={"device": "cpu"},
             encode_kwargs={"normalize_embeddings": True},
         )
