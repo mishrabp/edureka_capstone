@@ -30,6 +30,7 @@ class VectorStoreManager:
         logger.info("Loading embedding model: %s", settings.embedding_model)
         self._embeddings = HuggingFaceEmbeddings(
             model_name=settings.embedding_model,
+            cache_folder=get_settings().hf_home or "/home/user/.cache",
             model_kwargs={"device": "cpu"},
             encode_kwargs={"normalize_embeddings": True},
         )

@@ -113,4 +113,4 @@ This system fully implements the 10 mandated tasks, including **Intelligent Docu
 
 ## 6. HuggingFace Space
 
-The application is also deployed on HuggingFace Space. You can access it at: https://huggingface.co/spaces/mishrabp/edureka
+The application is also deployed on HuggingFace Space. You can access it at: https://mishrabp-edureka.hf.space/

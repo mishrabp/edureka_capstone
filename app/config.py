@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     app_port: int = 8001
     frontend_origin: str = "http://localhost:8501"
 
+    # Cache
+    hf_home: str = "/home/user/.cache"
+
 
 @lru_cache
 def get_settings() -> Settings:

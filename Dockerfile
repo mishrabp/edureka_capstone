@@ -10,6 +10,7 @@ ENV PYTHONUNBUFFERED=1 \
     UV_COMPILE_BYTECODE=1 \
     UV_SYSTEM_PYTHON=1 \
     HF_HOME=/home/user/.cache \
+    SENTENCE_TRANSFORMERS_HOME=/home/user/.cache \
     HOME=/home/user
 
 # Set working directory
