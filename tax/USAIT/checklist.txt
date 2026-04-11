@@ -1,0 +1,12 @@
+[X] - W2 Bibhu
+[X] - W2 Sunita
+[X] - 1099 Fidelity Sunita
+[X] - 1099 Fidelity Bibhu
+[X] - 1099 Adavancial
+[X] - 1099 Capital One
+[NA] - 1099 Chase
+[X] - 1099 Robinhood
+[ ] - HSA Sunita
+[ ] - HSA Bibhu old
+[ ] - HSA Bibhu new
+
